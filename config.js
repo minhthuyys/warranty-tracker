@@ -1,10 +1,10 @@
 ﻿module.exports = {
     "database": {
-        "host": process.env.HOST,
+        "host": "remotemysql.com",
         "port": 3306,
-        "user": process.env.USER,
-        "password": process.env.PASSWORD,
-        "database": process.env.DATABASE
+        "user": "Cn6LcmdPed",
+        "password": "KbEtWvTd1F",
+        "database": "Cn6LcmdPed"
     },
-    "secret": process.env.SECRET
+    "secret": "secretkey"
 };
