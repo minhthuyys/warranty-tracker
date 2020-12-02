@@ -1,6 +1,6 @@
 ﻿module.exports = {
     "database": {
-        "host": "remotemysql.com",
+        "host": process.env.HOST,
         "port": 3306,
         "user": "Cn6LcmdPed",
         "password": "KbEtWvTd1F",
