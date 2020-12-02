@@ -1,7 +1,4 @@
-﻿const dotenv = require('dotenv');
-dotenv.config();
-
-module.exports = {
+﻿module.exports = {
     "database": {
         "host": process.env.HOST,
         "port": 3306,
