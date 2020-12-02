@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/', function(req, res) {
+    res.json({ message: 'Warranty Tracker API - Usage: https://gitlab.com/minhthu.vh.24/warranty-tracker/-/tree/master/SERVER-API' });
+});
+
 // api routes
 app.use('/users', require('./users/users.controller'));
 app.use('/products',require('./products/products.controller'));

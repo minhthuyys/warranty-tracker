@@ -6,5 +6,5 @@
         "password": "KbEtWvTd1F",
         "database": "Cn6LcmdPed"
     },
-    "secret": "secretkey"
+    "secret": process.env.SECRET
 };
