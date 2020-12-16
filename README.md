@@ -15,7 +15,7 @@ npm start
 
 ## Live server
 
-Update...
+https://warranty-tracker-pecs.herokuapp.com/
 
 **In case you want to use local or your own db server - MODIFY THE config.json**
 

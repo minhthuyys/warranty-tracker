@@ -18,13 +18,16 @@ module.exports = router;
 function createSchema(req, res, next) {
     const schema = Joi.object({
         name: Joi.string().required(),
-        brand_id: Joi.number().required(),
+        brand: Joi.string(),
         price: Joi.number().required(),
         currency_unit: Joi.string().required(),
         purchase_date: Joi.date().required(),
         expiry_date: Joi.date().required(),
         user_id: Joi.number().required(),
-        merchant_id: Joi.number().required()
+        merchant: Joi.string(),
+        location: Joi.string(),
+        website: Joi.string(),
+        phone_number:Joi.number()
     });
     validateRequest(req, next, schema);
 }
@@ -50,13 +53,16 @@ function getById(req, res, next) {
 function updateSchema(req, res, next) {
     const schema = Joi.object({
         name: Joi.string().empty(''),
-        brand_id: Joi.number().empty(''),
+        brand: Joi.string().empty(''),
         price: Joi.number().empty(''),
         currency_unit: Joi.string().empty(''),
         purchase_date: Joi.date().empty(''),
         expiry_date: Joi.date().empty(''),
         user_id: Joi.number().empty(''),
-        merchant_id: Joi.number().empty('')
+        merchant: Joi.string().empty(''),
+        location: Joi.string().empty(''),
+        website: Joi.string().empty(''),
+        phone_number:Joi.number().empty('')
     });
     validateRequest(req, next, schema);
 }
