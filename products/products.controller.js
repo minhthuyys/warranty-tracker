@@ -18,16 +18,16 @@ module.exports = router;
 function createSchema(req, res, next) {
     const schema = Joi.object({
         name: Joi.string().required(),
-        brand: Joi.string(),
+        brand: Joi.string().allow(''),
         price: Joi.number().required(),
         currency_unit: Joi.string().required(),
         purchase_date: Joi.date().required(),
         expiry_date: Joi.date().required(),
         user_id: Joi.number().required(),
-        merchant: Joi.string(),
-        location: Joi.string(),
-        website: Joi.string(),
-        phone_number:Joi.number()
+        merchant: Joi.string().allow(''),
+        location: Joi.string().allow(''),
+        website: Joi.string().allow(''),
+        phone_number:Joi.number().allow('')
     });
     validateRequest(req, next, schema);
 }
